@@ -1,0 +1,2 @@
+module ImageCardsHelper
+end
