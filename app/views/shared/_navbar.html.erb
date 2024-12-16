@@ -1,1 +1,18 @@
-<h3>naviii</h3>
+<div class="sidebar">
+  <div class="navbar-header">
+    <h2>Sessions</h2>
+    <%= link_to "New Session", new_session_path, class: "btn btn-primary" %>
+  </div>
+  <ul class="session-list">
+    <% Session.includes(:tag).order(created_at: :desc).each do |session| %>
+      <li class="session-item">
+        <div class="session-details">
+          <%= link_to session.name, session_path(session), class: "session-link" %>
+          <p><strong>Created:</strong> <%= session.created_at.strftime("%d %b %Y") %></p>
+          <p><strong>Tag:</strong> <%= session.tag.name %></p>
+        </div>
+        <%= link_to "🗑", session_path(session), method: :delete, data: { confirm: "Are you sure?" }, class: "delete-icon" %>
+      </li>
+    <% end %>
+  </ul>
+</div>

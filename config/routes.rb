@@ -11,4 +11,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "pages#home"
+  resources :sessions
+  resources :question_cards
+  resources :image_cards
 end

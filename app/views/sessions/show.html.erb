@@ -1,0 +1,22 @@
+<div class="session-show">
+  <h1><%= @session.name %></h1>
+  <p><strong>Tag:</strong> <%= @session.tag.name %></p>
+  <p><strong>Created:</strong> <%= @session.created_at.strftime("%d %b %Y") %></p>
+  <h2>Question Cards</h2>
+  <ul class="card-list">
+    <% @session.question_cards.each do |card| %>
+      <li class="card-item">
+        <p><strong>Question:</strong> <%= card.question %></p>
+        <p><strong>Answer:</strong> <%= card.answer %></p>
+      </li>
+    <% end %>
+  </ul>
+  <h2>Image Cards</h2>
+  <ul class="card-list">
+    <% @session.image_cards.each do |card| %>
+      <li class="card-item">
+        <p><strong>Image:</strong> <%= card.name %></p>
+      </li>
+    <% end %>
+  </ul>
+</div>

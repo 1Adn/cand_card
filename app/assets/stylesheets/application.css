@@ -1,15 +1,139 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+/* Container and layout */
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 300px;
+  background: #99c2a2; /* Primary pastel green */
+  color: white;
+  padding: 20px;
+  border-right: 2px solid #93b1a7;
+  height: 100vh;
+  position: fixed;
+  overflow-y: auto;
+}
+
+.navbar-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.navbar-header h2 {
+  font-size: 22px;
+  color: white;
+}
+
+.navbar-header .btn {
+  background-color: #c5edac; /* Secondary green */
+  color: #093824; /* Dark green for contrast */
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.session-list {
+  list-style: none;
+  padding: 0;
+}
+
+.session-item {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #dbfeb8; /* Accent green */
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.session-item .session-link {
+  font-size: 16px;
+  color: #093824; /* Dark green */
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.session-item p {
+  margin: 5px 0;
+  font-size: 12px;
+}
+
+.delete-icon {
+  color: #ff4c4c;
+  text-decoration: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+/* ============================== NEW SESSION ==================================*/
+.form-container {
+  background-color: #f9f9f9; /* Neutral background */
+  padding: 20px;
+  margin: 50px auto;
+  max-width: 500px;
+  border-radius: 8px;
+  border: 2px solid #93b1a7;
+}
+
+h1 {
+  text-align: center;
+  color: #093824; /* Dark green */
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #93b1a7;
+}
+
+.btn-success {
+  background-color: #99c2a2;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ============================== SHOW SESSION ==================================*/
+
+.session-show {
+  padding: 20px;
+  margin-left: 320px; /* Leave space for the sidebar */
+}
+
+h1 {
+  font-size: 28px;
+  color: #093824; /* Dark green */
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 22px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #99c2a2; /* Primary green */
+}
+
+.card-list {
+  list-style: none;
+  padding: 0;
+}
+
+.card-item {
+  background-color: #dbfeb8; /* Accent green */
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
